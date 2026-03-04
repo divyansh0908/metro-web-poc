@@ -1,0 +1,21 @@
+{
+  "name": "metro-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node dev.js --reset-cache",
+    "build": "node build.js",
+    "preview": "npx serve dist"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "express": "latest",
+    "metro": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "author": "",
+  "license": "ISC"
+}
