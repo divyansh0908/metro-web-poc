@@ -13,16 +13,16 @@ async function main() {
   const { middleware, attachHmrServer } = await Metro.createConnectMiddleware(config, {
     port: 3000,
   });
+  app.use(middleware);
+  attachHmrServer(server);
 
   // Serve HTML shell
   app.get('/', (req, res) => {
     res.sendFile(path.resolve('public/index.html'));
   });
 
-  app.use(middleware);
 
   server.listen(3000, () => console.log('Dev server running at http://localhost:3000'));
-  attachHmrServer(server);
 }
 
 main().catch(console.error);
